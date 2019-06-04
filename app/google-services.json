@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1010408511529",
+    "firebase_url": "https://keepcount-80cfc.firebaseio.com",
+    "project_id": "keepcount-80cfc",
+    "storage_bucket": "keepcount-80cfc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010408511529:android:b331934b66c80eda",
+        "android_client_info": {
+          "package_name": "com.app.keepcount"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010408511529-i0cpjim5timkuio57c5gn14e3cbs6q74.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.keepcount",
+            "certificate_hash": "360e47ed477e1968b92df1a29e7e2e230a0ff80c"
+          }
+        },
+        {
+          "client_id": "1010408511529-4lb9q0n66s8pdg1bpn7e0fgfg0hhtaun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOt7btx9_StjT7bEIoqU8HQEPi2A713hc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010408511529-4lb9q0n66s8pdg1bpn7e0fgfg0hhtaun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
