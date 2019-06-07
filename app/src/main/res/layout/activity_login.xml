@@ -21,6 +21,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:gravity="center_horizontal"/>
 
-
-
+    <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="338dp"
+            tools:layout_editor_absoluteX="93dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_coins"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:id="@+id/imgCoin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtAppName"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
