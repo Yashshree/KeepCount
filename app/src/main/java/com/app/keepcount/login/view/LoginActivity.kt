@@ -30,7 +30,6 @@ import android.view.animation.RotateAnimation
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
-
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var auth: FirebaseAuth
     val RC_SIGN_IN = 10

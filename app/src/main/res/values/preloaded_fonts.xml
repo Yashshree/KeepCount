@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/copse</item>
+        <item>@font/coustard</item>
+        <item>@font/crete_round</item>
+        <item>@font/inika</item>
+        <item>@font/montaga</item>
+        <item>@font/neuton</item>
+        <item>@font/neuton_extralight</item>
+        <item>@font/pacifico</item>
+        <item>@font/scada</item>
+        <item>@font/sura</item>
+    </array>
+</resources>
