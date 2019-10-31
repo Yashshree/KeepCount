@@ -24,16 +24,16 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/sign_in_button"
+            android:id="@+id/btnLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_8sdp"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="@dimen/_8sdp"
             android:background="@drawable/rounded_background"
-            android:drawableStart="@drawable/ic_google_logo"
             android:fontFamily="@font/copse"
             android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_done"
             android:text="@string/txt_sign_in_with_google"
             android:textAllCaps="false"
             android:textColor="@color/colorBlue"
@@ -63,4 +63,12 @@
             app:layout_constraintBottom_toTopOf="@+id/sign_in_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="182dp"
+            tools:layout_editor_absoluteY="134dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
