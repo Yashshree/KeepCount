@@ -16,7 +16,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         txtAppName.setOnClickListener {
             //FirebaseAuth.getInstance().signOut()
-
         }
 
         playCoinSound()
@@ -31,6 +30,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun signIn() {
+
     }
 
     override fun onClick(v: View?) {

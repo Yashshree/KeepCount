@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/rootLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/rootLayout"
         android:background="@drawable/gradient_login_background"
         tools:context=".login.view.LoginActivity">
 
@@ -13,41 +12,55 @@
             android:id="@+id/txtAppName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/_28ssp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/pacifico"
+            android:gravity="center_horizontal"
+            android:text="@string/app_name"
             android:textColor="@android:color/white"
-            android:text="@string/app_name" android:fontFamily="@font/pacifico" android:layout_marginTop="@dimen/_8sdp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/_28ssp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:gravity="center_horizontal"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/sign_in_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="@dimen/_8sdp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginTop="60dp"
-            android:drawableStart="@drawable/ic_google_logo"
-            android:padding="@dimen/_8sdp"
-            android:textSize="@dimen/_18ssp"
-            android:textColor="@color/colorBlue"
-            android:textAllCaps="false"
-            android:fontFamily="@font/copse"
-            android:text="@string/txt_sign_in_with_google"
-            android:background="@drawable/rounded_background"
-            app:layout_constraintTop_toBottomOf="@+id/imgCoin"
-            app:layout_constraintHorizontal_bias="0.0"/>
-    <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_coins"
-            android:layout_marginTop="@dimen/_64sdp"
-            android:id="@+id/imgCoin"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@drawable/rounded_background"
+            android:drawableStart="@drawable/ic_google_logo"
+            android:fontFamily="@font/copse"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/txt_sign_in_with_google"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/_18ssp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgCoin" />
+
+    <ImageView
+            android:id="@+id/imgCoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_8sdp"
-            app:layout_constraintTop_toBottomOf="@+id/txtAppName"/>
+            android:layout_marginTop="@dimen/_64sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAppName"
+            app:srcCompat="@drawable/ic_coins" />
+
+    <EditText
+            android:id="@+id/txtUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/sign_in_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
