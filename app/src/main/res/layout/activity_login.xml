@@ -16,7 +16,7 @@
             android:fontFamily="@font/pacifico"
             android:gravity="center_horizontal"
             android:text="@string/app_name"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorAccent"
             android:textSize="@dimen/_28ssp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -24,51 +24,45 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btnLogin"
+            android:id="@+id/fabLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="@dimen/_16sdp"
             android:layout_marginEnd="@dimen/_8sdp"
-            android:background="@drawable/rounded_background"
             android:fontFamily="@font/copse"
             android:padding="@dimen/_8sdp"
+            android:clickable="true"
             android:src="@drawable/ic_done"
-            android:text="@string/txt_sign_in_with_google"
             android:textAllCaps="false"
-            android:textColor="@color/colorBlue"
             android:textSize="@dimen/_18ssp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgCoin" />
+            app:layout_constraintTop_toBottomOf="@+id/edtUserName" />
 
     <ImageView
             android:id="@+id/imgCoin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginTop="@dimen/_64sdp"
+            android:layout_marginTop="@dimen/_96sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtAppName"
             app:srcCompat="@drawable/ic_coins" />
 
     <EditText
-            android:id="@+id/txtUserName"
+            android:id="@+id/edtUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
-            android:ems="10"
+            android:layout_marginTop="@dimen/_64sdp"
+            android:fontFamily="@font/cambo"
+            android:hint="@string/txt_what_should_we"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/sign_in_button"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:cursorVisible="false"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/imgCoin"/>
 
-    <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="182dp"
-            tools:layout_editor_absoluteY="134dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

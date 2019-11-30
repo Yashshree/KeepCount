@@ -2,6 +2,7 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/</item>
+        <item>@font/cambo</item>
         <item>@font/copse</item>
         <item>@font/coustard</item>
         <item>@font/crete_round</item>

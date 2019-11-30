@@ -1,4 +1,4 @@
-package application
+package com.app.keepcount.application
 
 import android.app.Application
 import com.google.firebase.FirebaseApp

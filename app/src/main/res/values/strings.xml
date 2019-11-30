@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">KeepCount</string>
-    <string name="txt_sign_in_with_google">Sign In With Google</string>
+    <string name="txt_what_should_we">What should we call you</string>
 </resources>
