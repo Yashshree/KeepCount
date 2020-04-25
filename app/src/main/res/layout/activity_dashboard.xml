@@ -7,4 +7,13 @@
         android:layout_height="match_parent"
         tools:context=".dashboard.DashboardActivity">
 
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:cnb_menuResource="@menu/bottom_menu" />
 </androidx.constraintlayout.widget.ConstraintLayout>
