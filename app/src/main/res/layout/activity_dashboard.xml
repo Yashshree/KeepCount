@@ -7,13 +7,15 @@
         android:layout_height="match_parent"
         tools:context=".dashboard.DashboardActivity">
 
+    <include layout="@layout/toolbar_layout"/>
+
     <com.ismaeldivita.chipnavigation.ChipNavigationBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:background="@android:color/white"
+            app:cnb_menuResource="@menu/bottom_menu"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:cnb_menuResource="@menu/bottom_menu" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
