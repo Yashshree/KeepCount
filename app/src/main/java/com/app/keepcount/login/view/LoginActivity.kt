@@ -1,36 +1,29 @@
 package com.app.keepcount.login.view
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_login.*
 import android.media.MediaPlayer
+import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.animation.AnimationUtils
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.app.keepcount.R
 import com.app.keepcount.dashboard.DashboardActivity
-import com.app.keepcount.models.User
-import com.google.firebase.database.FirebaseDatabase
+import com.app.keepcount.utility.Status
+import kotlinx.android.synthetic.main.activity_login.*
 import org.jetbrains.anko.startActivity
-import java.text.SimpleDateFormat
-import java.util.*
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.ValueEventListener
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-import com.google.firebase.database.DatabaseError
+import org.jetbrains.anko.toast
 
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
-    val databaseInstance = FirebaseDatabase.getInstance()
-    val databaseReference=databaseInstance.reference
-
+    lateinit var loginViewModel: LoginViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        loginViewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
         txtAppName.setOnClickListener {
             //FirebaseAuth.getInstance().signOut()
@@ -40,11 +33,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         initView()
     }
-
-
-
-   
-
 
 
     private fun initView() {
@@ -69,31 +57,34 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun signIn() {
 
-        isUserExists(edtUserName.text.toString())
+     //   isUserExists(edtUserName.text.toString())
 
 
-       /*val currentDate = SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH).format(Calendar.getInstance().time)
-        val user = User(userName = edtUserName.text.toString(),loginStatus =  true,loggedDate =currentDate,latestAccountActivity = currentDate )
-        databaseReference.child("users").child(user.id).setValue(user)
-        Log.e("useId===",user.id)
+        /*val currentDate = SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH).format(Calendar.getInstance().time)
+         val user = User(userName = edtUserName.text.toString(),loginStatus =  true,loggedDate =currentDate,latestAccountActivity = currentDate )
+         databaseReference.child("users").child(user.id).setValue(user)
+         Log.e("useId===",user.id)
 
-        startActivity<DashboardActivity>()
-        finish()*/
-    }
+         startActivity<DashboardActivity>()
+         finish()*/
 
-    private fun isUserExists(userName:String) {
-        val ref = databaseReference.child("users")
-        val queryRef = ref.orderByChild("userName").equalTo(userName)
-        queryRef.addListenerForSingleValueEvent(object : ValueEventListener {
-            override fun onCancelled(p0: DatabaseError) {
-
-            }
-
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    val shot=dataSnapshot.value
+        loginViewModel.isUserExists(edtUserName.text.toString()).observe(this, Observer {
+            if(it.status==Status.LOADING)
+            {
+                toast("loading")
+            }else if(it.status==Status.ERROR)
+            {
+                toast("error")
+            }else if(it.status==Status.SUCCESS)
+            {
+                if(it.data!!)
+                    toast("please enter another user name!!")
+                else
+                    startActivity<DashboardActivity>()
             }
         })
     }
+
 
     override fun onClick(v: View?) {
         when (v?.id) {
