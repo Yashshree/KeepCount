@@ -7,7 +7,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import org.jetbrains.anko.*
 
-class MainActivity : AppCompatActivity() {
+class  MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,5 +28,8 @@ class MainActivity : AppCompatActivity() {
             startActivity<secondActivity>()
         }).show()
 
+
     }
+
+
 }

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_32sdp"
+        android:paddingBottom="@dimen/_32sdp">
+
+    <TextView
+            android:id="@+id/imgHomeMaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_cooking"
+            android:text="@string/txt_home_maker"
+            app:layout_constraintEnd_toStartOf="@+id/imgEmployee"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAlignment="center"
+            android:drawablePadding="@dimen/_5sdp"
+
+            />
+
+    <TextView
+            android:id="@+id/imgEmployee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_dollar"
+            android:text="@string/txt_professional"
+            android:drawablePadding="@dimen/_5sdp"
+            app:layout_constraintEnd_toStartOf="@+id/imgOther"
+            app:layout_constraintStart_toEndOf="@+id/imgHomeMaker"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAlignment="center"
+             />
+
+    <TextView
+            android:id="@+id/imgOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_other"
+            android:text="@string/txt_other"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgEmployee"
+            app:layout_constraintTop_toTopOf="parent"
+            android:drawablePadding="@dimen/_5sdp"
+            android:textAlignment="center"
+             />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

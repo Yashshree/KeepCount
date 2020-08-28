@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   xmlns:tools="http://schemas.android.com/tools"
-                                                   android:id="@+id/rootLayout"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent"
-                                                   android:background="@drawable/gradient_login_background"
-                                                   tools:context=".login.view.LoginActivity">
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_login_background"
+        tools:context=".login.view.LoginActivity">
 
     <TextView
             android:id="@+id/txtAppName"
@@ -18,9 +18,11 @@
             android:gravity="center_horizontal"
             android:text="@string/app_name"
 
-            android:textColor="@color/colorPrimary" android:textSize="@dimen/_28ssp"
-            app:layout_constraintBottom_toTopOf="@+id/edtUserName" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_28ssp"
+            app:layout_constraintBottom_toTopOf="@+id/edtUserName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -28,18 +30,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/_32sdp"
             android:layout_marginEnd="8dp"
             android:backgroundTint="#F48FB1"
             android:clickable="true"
-            android:layout_marginTop="@dimen/_32sdp"
             android:fontFamily="@font/copse"
             android:padding="@dimen/_8sdp"
             android:src="@drawable/ic_done"
             android:textAllCaps="false"
             android:textSize="@dimen/_18ssp"
             app:layout_constraintEnd_toEndOf="parent"
-             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtUserName"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtUserName" />
 
     <!-- <ImageView
             android:id="@+id/imgCoin"
@@ -58,20 +60,20 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="@dimen/_112sdp"
             android:layout_marginEnd="8dp"
-            android:paddingTop="@dimen/_8sdp"
-            android:paddingBottom="@dimen/_8sdp"
-            android:paddingStart="@dimen/_32sdp"
-            android:paddingEnd="@dimen/_32sdp"
-            android:fontFamily="@font/cambo"
             android:background="@drawable/edit_text_round_background"
+            android:fontFamily="@font/cambo"
             android:hint="@string/txt_what_should_we"
             android:inputType="textPersonName"
+            android:paddingStart="@dimen/_32sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_32sdp"
+            android:paddingBottom="@dimen/_8sdp"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             app:layout_constraintBottom_toTopOf="@+id/fabLogin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtAppName"/>
+            app:layout_constraintTop_toBottomOf="@+id/txtAppName" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

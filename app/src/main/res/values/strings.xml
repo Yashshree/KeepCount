@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">Keep Count</string>
     <string name="txt_what_should_we">What should we call you</string>
+    <string name="txt_rate">Rate</string>
+    <string name="txt_feedback">Feedback</string>
+    <string name="txt_logout">Logout</string>
+    <string name="txt_share">Share</string>
+    <string name="txt_enable_lock">Enable Lock</string>
+    <string name="txt_theme">Theme</string>
+    <string name="txt_press_again_to_exit">Press again to exit .</string>
+    <string name="txt_ok">Ok</string>
+    <string name="txt_its_never_too_late">Its never too late \n Click + to add your monthly budget today</string>
+    <string name="txt_tell_us_your_role">Tell us your role</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_home_maker">Home maker</string>
+    <string name="txt_other">Other</string>
+    <string name="txt_professional">Professional</string>
 </resources>
